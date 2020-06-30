@@ -101,7 +101,7 @@ Thread.Sleep(Usefuls.Latency + 500);
 }
 
 if(ItemsManager.GetItemCountById(5060) &gt; 0)
-	return true;
+    return true;
 
 }
 
@@ -1142,7 +1142,7 @@ return true;</Code>
     }
 
     wManager.wManagerSetting.CurrentSetting.AttackBeforeBeingAttacked = false;
-    wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 100;
+    wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 1;
     var target = ObjectManager.GetObjectWoWUnit().FirstOrDefault(o =&gt; o.Entry == 7053);
     if (target != null &amp;&amp; target.IsAlive)
     {
@@ -1155,7 +1155,7 @@ return true;</Code>
         while (Conditions.InGameAndConnectedAndAliveAndProductStartedNotInPause &amp;&amp; target.GetDistance &gt;= 5)
         {
             if(ObjectManager.Me.Target != target.Guid)
-	ObjectManager.Me.Target = target.Guid;
+    ObjectManager.Me.Target = target.Guid;
 
             Lua.LuaDoString("CastSpellByName('Sap')");
             Fight.StopFight();

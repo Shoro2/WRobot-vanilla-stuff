@@ -856,11 +856,11 @@ else if (Usefuls.MapZoneName.Contains("Teldrassil"))
         if (zeppelin != null &amp;&amp; zeppelin.Position.DistanceTo(toZeppelinWaitPosition) &lt; 1)
         {
 /*
-	wManager.Wow.Helpers.MovementManager.Face(new Vector3(8557.925, 1020.943, 5.380576));
+    wManager.Wow.Helpers.MovementManager.Face(new Vector3(8557.925, 1020.943, 5.380576));
 Thread.Sleep(robotManager.Helpful.Others.Random(250, 250));
             wManager.Wow.Helpers.Move.Forward(Move.MoveAction.PressKey, 250);
 Thread.Sleep(robotManager.Helpful.Others.Random(50, 100));
-	wManager.Wow.Helpers.MovementManager.Face(new Vector3(8557.925, 1020.943, 5.380576));
+    wManager.Wow.Helpers.MovementManager.Face(new Vector3(8557.925, 1020.943, 5.380576));
 Thread.Sleep(robotManager.Helpful.Others.Random(100, 200));
             wManager.Wow.Helpers.Move.Forward(Move.MoveAction.PressKey, 1500);
             wManager.Wow.Helpers.Move.StrafeRight(Move.MoveAction.PressKey, 1000);
@@ -4575,9 +4575,9 @@ public class FlightMaster
             if (id == wManager.Wow.Enums.LuaEventsId.PLAYER_ENTER_COMBAT)
             {
                 disposeFlightMaster(2);
-          		  Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
+                    Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
             }
-          	
+              
 
         };
 
@@ -7121,7 +7121,7 @@ public class Boat
             wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
             wManager.wManagerSetting.CurrentSetting.Repair = false;
             wManager.wManagerSetting.CurrentSetting.Selling = false;
-            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = false;
+            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = true;
 
             // Code:
             if(!Conditions.InGameAndConnectedAndProductStartedNotInPause)

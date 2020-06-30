@@ -56,7 +56,7 @@
     <QuestsSorted Action="Pulse" NameClass="GRINDGrindTo49" />
     <QuestsSorted Action="Pulse" NameClass="ROUTEOuthouseBackToThoriumPoint" />
     <QuestsSorted Action="RunCode" NameClass="FlightMaster.takeTaxi(&quot;Searing Gorge&quot;, &quot;Duskwood&quot;);" />
-    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.SearchRadius = 100;&#xD;&#xA;&#xD;&#xA;ProgressSettings.Dispose();&#xD;&#xA;ProgressSettings.inProgress = false;&#xD;&#xA;SearingGorgeFixedPathfinding.Dispose();&#xD;&#xA;&#xD;&#xA;FNVSettings.Initialize();&#xD;&#xA;FNVSettings.CurrentSettings.searingGorgeEins = true;&#xD;&#xA;FNVSettings.Dispose();" />
+    <QuestsSorted Action="RunCode" NameClass="wManager.wManagerSetting.CurrentSetting.SearchRadius = 200;&#xD;&#xA;&#xD;&#xA;ProgressSettings.Dispose();&#xD;&#xA;ProgressSettings.inProgress = false;&#xD;&#xA;SearingGorgeFixedPathfinding.Dispose();&#xD;&#xA;&#xD;&#xA;FNVSettings.Initialize();&#xD;&#xA;FNVSettings.CurrentSettings.searingGorgeEins = true;&#xD;&#xA;FNVSettings.Dispose();" />
     <QuestsSorted Action="LoadProfile" NameClass="FNV_V2\#0 START_FNVLauncher_V2.xml" />
   </QuestsSorted>
   <NpcQuest>
@@ -2223,9 +2223,9 @@ public class FlightMaster
             if (id == wManager.Wow.Enums.LuaEventsId.PLAYER_ENTER_COMBAT)
             {
                 disposeFlightMaster(2);
-          		  Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
+                    Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
             }
-          	
+              
 
         };
 
@@ -4769,7 +4769,7 @@ public class Boat
             wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
             wManager.wManagerSetting.CurrentSetting.Repair = false;
             wManager.wManagerSetting.CurrentSetting.Selling = false;
-            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = false;
+            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = true;
 
             // Code:
             if(!Conditions.InGameAndConnectedAndProductStartedNotInPause)

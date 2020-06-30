@@ -774,9 +774,9 @@ public class FlightMaster
             if (id == wManager.Wow.Enums.LuaEventsId.PLAYER_ENTER_COMBAT)
             {
                 disposeFlightMaster(2);
-          		  Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
+                    Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
             }
-          	
+              
 
         };
 
@@ -3320,7 +3320,7 @@ public class Boat
             wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
             wManager.wManagerSetting.CurrentSetting.Repair = false;
             wManager.wManagerSetting.CurrentSetting.Selling = false;
-            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = false;
+            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = true;
 
             // Code:
             if(!Conditions.InGameAndConnectedAndProductStartedNotInPause)

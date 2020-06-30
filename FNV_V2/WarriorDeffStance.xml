@@ -305,9 +305,9 @@ public class FlightMaster
             if (id == wManager.Wow.Enums.LuaEventsId.PLAYER_ENTER_COMBAT)
             {
                 disposeFlightMaster(2);
-          		  Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
+                    Logging.Write("[FNV_Quester]: Player entered combat, stop Flight Master");
             }
-          	
+              
 
         };
 
@@ -2875,7 +2875,7 @@ public class Boat
             wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
             wManager.wManagerSetting.CurrentSetting.Repair = false;
             wManager.wManagerSetting.CurrentSetting.Selling = false;
-            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = false;
+            wManager.wManagerSetting.CurrentSetting.UsePathsFinder = true;
 
             // Code:
             if(!Conditions.InGameAndConnectedAndProductStartedNotInPause)
@@ -3617,9 +3617,9 @@ public class QuesterSettings
 
     public static void ClassSettings()
     {
-        if(ObjectManager.Me.WowClass == WoWClass.Warlock)
+        if (ObjectManager.Me.WowClass == WoWClass.Warlock)
         {
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
                 case (1):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
@@ -3629,6 +3629,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
 
                 case (2):
@@ -3636,9 +3640,13 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
+                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Ice Cold Milk";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Darnassian Bleu";
                     break;
 
                 case (3):
@@ -3646,9 +3654,13 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
+                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Melon Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Stormwind Brie";
                     break;
 
                 case (4):
@@ -3656,9 +3668,13 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 40;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 45;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 45;
+                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Moonberry Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (5):
@@ -3669,6 +3685,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (6):
@@ -3679,6 +3699,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Homemade Cherry Pie";
                     break;
 
                 default:
@@ -3686,31 +3710,21 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
+                    wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 50;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
             }
-
-            if(wManager.wManagerSetting.CurrentSetting.DrinkName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
-            }
-
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
-            }
-
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Warlock");
         }
 
-        if(ObjectManager.Me.WowClass == WoWClass.Warrior)
+        if (ObjectManager.Me.WowClass == WoWClass.Warrior)
         {
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
 
                 case (1):
@@ -3721,6 +3735,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
 
                 case (2):
@@ -3731,6 +3747,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Darnassian Bleu";
                     break;
 
                 case (3):
@@ -3741,6 +3759,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 70;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Stormwind Brie";
                     break;
 
                 case (4):
@@ -3751,6 +3771,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 80;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (5):
@@ -3761,6 +3783,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 80;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (6):
@@ -3771,6 +3795,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 80;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Homemade Cherry Pie";
                     break;
 
                 default:
@@ -3781,21 +3807,17 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
-            }
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
             }
 
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Warrior");
         }
 
-        if(ObjectManager.Me.WowClass == WoWClass.Rogue)
+        if (ObjectManager.Me.WowClass == WoWClass.Rogue)
         {
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
                 case (1):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 0;
@@ -3805,6 +3827,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
 
                 case (2):
@@ -3815,6 +3839,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Darnassian Bleu";
                     break;
 
                 case (3):
@@ -3825,6 +3851,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Stormwind Brie";
                     break;
 
                 case (4):
@@ -3835,6 +3863,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 75;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (5):
@@ -3845,6 +3875,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 80;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (6):
@@ -3855,6 +3887,8 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 80;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Homemade Cherry Pie";
                     break;
 
                 default:
@@ -3865,22 +3899,17 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 0;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
-            }
-
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
             }
 
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Rogue");
         }
 
-        if(ObjectManager.Me.WowClass == WoWClass.Mage)
+        if (ObjectManager.Me.WowClass == WoWClass.Mage)
         {
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
                 case (1):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
@@ -3952,208 +3981,273 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
                     break;
             }
-
-            if(wManager.wManagerSetting.CurrentSetting.DrinkName.Length &lt; 2)
-            {
+            if(ObjectManager.Me.Level &gt;= 60){
+                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                wManager.wManagerSetting.CurrentSetting.DrinkName = "Conjured Crystal Water";
+                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Cinnamon Roll";
+            }
+            else if(ObjectManager.Me.Level &gt;= 52){
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Conjured Sparkling Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Sweet Roll";
+            }
+            else if(ObjectManager.Me.Level &gt;= 42){
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Conjured Mineral Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Sourdough";
+            }
+            else if(ObjectManager.Me.Level &gt;= 32){
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Conjured Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Pumpernickel";
+            }
+            else if(ObjectManager.Me.Level &gt;= 22){
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Conjured Purified Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Cinnamon Roll";
+            }
+            else if(ObjectManager.Me.Level &gt;= 12){
+                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                wManager.wManagerSetting.CurrentSetting.DrinkName = "Conjured Fresh Water";
+                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Rye";
+            }
+            else if(ObjectManager.Me.Level &gt;= 6){
+                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                wManager.wManagerSetting.CurrentSetting.DrinkName = "RConjured Water";
+                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                wManager.wManagerSetting.CurrentSetting.FoodName = "Conjured Muffin";
+            }
+            else{
                 wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
                 wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
-            }
-
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
                 wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
                 wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
             }
-
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Mage");
         }
 
-        if(ObjectManager.Me.WowClass == WoWClass.Druid)
+        if (ObjectManager.Me.WowClass == WoWClass.Druid)
         {
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
                 case (1):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
 
                 case (2):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Ice Cold Milk";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Darnassian Bleu";
                     break;
 
                 case (3):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Melon Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Stormwind Brie";
                     break;
 
                 case (4):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 80;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 45;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Moonberry Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (5):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 80;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (6):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Homemade Cherry Pie";
                     break;
 
                 default:
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
-            }
-
-            if(wManager.wManagerSetting.CurrentSetting.DrinkName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
-            }
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.FoodName = "Healing Touch";
-                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = true;
             }
 
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Druid");
         }
 
-        if(ObjectManager.Me.WowClass == WoWClass.Paladin)
+        if (ObjectManager.Me.WowClass == WoWClass.Paladin)
         {
 
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
                 case (1):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
-                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
+                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 10;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
 
                 case (2):
-                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
-                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
+                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
+                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 10;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Ice Cold Milk";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Darnassian Bleu";
                     break;
 
                 case (3):
-                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 60;
-                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
+                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
+                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Melon Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Stormwind Brie";
                     break;
 
                 case (4):
-                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 80;
-                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
+                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
+                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 45;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Moonberry Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (5):
-                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 80;
-                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
+                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
+                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 50;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (6):
-                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 100;
-                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
+                    wManager.wManagerSetting.CurrentSetting.DrinkAmount = 40;
+                    wManager.wManagerSetting.CurrentSetting.FoodAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 55;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Homemade Cherry Pie";
                     break;
 
                 default:
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
                     wManager.wManagerSetting.CurrentSetting.FoodAmount = 0;
                     wManager.wManagerSetting.CurrentSetting.DrinkMaxPercent = 95;
-                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodMaxPercent = 95;
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
-                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 15;
+                    wManager.wManagerSetting.CurrentSetting.FoodPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
             }
-
-            if(wManager.wManagerSetting.CurrentSetting.DrinkName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
-            }
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.FoodName = "Holy Light";
-                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = true;
-            }
-
 
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Paladin");
         }
 
-        if(ObjectManager.Me.WowClass == WoWClass.Hunter)
+        if (ObjectManager.Me.WowClass == WoWClass.Hunter)
         {
-            switch(ObjectManager.Me.Level / 10)
+            switch (ObjectManager.Me.Level / 10)
             {
                 case (1):
                     wManager.wManagerSetting.CurrentSetting.DrinkAmount = 20;
@@ -4163,7 +4257,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 20;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
-                    Lua.LuaDoString("DEFAULT_CHAT_FRAME:AddMessage('[FNV_Quester]: Do not forget that wRobot counts empty bag slots of ammo bags as free bag space!')");
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
 
                 case (2):
@@ -4174,6 +4271,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Ice Cold Milk";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Darnassian Bleu";
                     break;
 
                 case (3):
@@ -4184,6 +4285,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Melon Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Stormwind Brie";
                     break;
 
                 case (4):
@@ -4194,6 +4299,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Moonberry Juice";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (5):
@@ -4204,6 +4313,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Soft Banana Bread";
                     break;
 
                 case (6):
@@ -4214,6 +4327,10 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Morning Glory Dew";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Homemade Cherry Pie";
                     break;
 
                 default:
@@ -4224,20 +4341,11 @@ public class QuesterSettings
                     wManager.wManagerSetting.CurrentSetting.DrinkPercent = 35;
                     wManager.wManagerSetting.CurrentSetting.FoodPercent = 65;
                     wManager.wManagerSetting.CurrentSetting.RestingMana = true;
-                    Lua.LuaDoString("DEFAULT_CHAT_FRAME:AddMessage('[FNV_Quester]: Do not forget that wRobot counts empty bag slots of ammo bags as free bag space!')");
+                    wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
+                    wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
+                    wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
                     break;
-            }
-
-            if(wManager.wManagerSetting.CurrentSetting.DrinkName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.DrinkIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.DrinkName = "Refreshing Spring Water";
-            }
-
-            if(wManager.wManagerSetting.CurrentSetting.FoodName.Length &lt; 2)
-            {
-                wManager.wManagerSetting.CurrentSetting.FoodIsSpell = false;
-                wManager.wManagerSetting.CurrentSetting.FoodName = "Tough Hunk of Bread";
             }
 
             Logging.Write("[FNV_Quester]: Using default food / drink settings for Hunter");
@@ -4262,32 +4370,32 @@ public class QuesterSettings
 
         wManager.wManagerSetting.CurrentSetting.Repair = true;
         wManager.wManagerSetting.CurrentSetting.SellGray = true;
-        wManager.wManagerSetting.CurrentSetting.SellGreen = true;
+        wManager.wManagerSetting.CurrentSetting.SellGreen = false;
         wManager.wManagerSetting.CurrentSetting.Selling = true;
         wManager.wManagerSetting.CurrentSetting.SellWhite = true;
-        wManager.wManagerSetting.CurrentSetting.MinFreeBagSlotsToGoToTown = 4;
+        wManager.wManagerSetting.CurrentSetting.MinFreeBagSlotsToGoToTown = 2;
 
-        wManager.wManagerSetting.CurrentSetting.SearchRadius = 100;
-        wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 100;
+        wManager.wManagerSetting.CurrentSetting.SearchRadius = 200;
+        wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 1;
 
         wManager.wManagerSetting.CurrentSetting.WallDistancePathFinder = 2;
-        wManager.wManagerSetting.CurrentSetting.AddToNpcDb = false;
+        wManager.wManagerSetting.CurrentSetting.AddToNpcDb = true;
         wManager.wManagerSetting.CurrentSetting.BlackListIfNotCompletePath = false;
-        wManager.wManagerSetting.CurrentSetting.UseCTM = true;
+        wManager.wManagerSetting.CurrentSetting.UseCTM = false;
         wManager.wManagerSetting.CurrentSetting.UseLuaToMove = false;
 
         wManager.wManagerSetting.CurrentSetting.NpcScanAuctioneer = false;
-        wManager.wManagerSetting.CurrentSetting.NpcScanMailboxes = false;
-        wManager.wManagerSetting.CurrentSetting.NpcScanRepair = false;
+        wManager.wManagerSetting.CurrentSetting.NpcScanMailboxes = true;
+        wManager.wManagerSetting.CurrentSetting.NpcScanRepair = true;
         wManager.wManagerSetting.CurrentSetting.NpcScanVendor = false;
 
         wManager.wManagerSetting.CurrentSetting.HarvestHerbs = false;
         wManager.wManagerSetting.CurrentSetting.HarvestMinerals = false;
 
         wManager.wManagerSetting.CurrentSetting.AvoidBlacklistedZonesPathFinder = true;
-        wManager.wManagerSetting.CurrentSetting.AvoidWallWithRays = true;
+        wManager.wManagerSetting.CurrentSetting.AvoidWallWithRays = false;
         wManager.wManagerSetting.CurrentSetting.BlackListTrainingDummy = true;
-        wManager.wManagerSetting.CurrentSetting.BlackListZoneWhereDead = false;
+        wManager.wManagerSetting.CurrentSetting.BlackListZoneWhereDead = true;
         wManager.wManagerSetting.CurrentSetting.CalcuCombatRange = false;
         wManager.wManagerSetting.CurrentSetting.CanAttackUnitsAlreadyInFight = false;
         wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
@@ -4350,32 +4458,32 @@ public class QuesterSettings
 
         wManager.wManagerSetting.CurrentSetting.Repair = true;
         wManager.wManagerSetting.CurrentSetting.SellGray = true;
-        wManager.wManagerSetting.CurrentSetting.SellGreen = true;
+        wManager.wManagerSetting.CurrentSetting.SellGreen = false;
         wManager.wManagerSetting.CurrentSetting.Selling = true;
         wManager.wManagerSetting.CurrentSetting.SellWhite = true;
-        wManager.wManagerSetting.CurrentSetting.MinFreeBagSlotsToGoToTown = 4;
+        wManager.wManagerSetting.CurrentSetting.MinFreeBagSlotsToGoToTown = 2;
 
-        wManager.wManagerSetting.CurrentSetting.SearchRadius = 100;
-        wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 100;
+        wManager.wManagerSetting.CurrentSetting.SearchRadius = 200;
+        wManager.wManagerSetting.CurrentSetting.MaxUnitsNear = 1;
 
         wManager.wManagerSetting.CurrentSetting.WallDistancePathFinder = 2;
-        wManager.wManagerSetting.CurrentSetting.AddToNpcDb = false;
+        wManager.wManagerSetting.CurrentSetting.AddToNpcDb = true;
         wManager.wManagerSetting.CurrentSetting.BlackListIfNotCompletePath = false;
-        wManager.wManagerSetting.CurrentSetting.UseCTM = true;
+        wManager.wManagerSetting.CurrentSetting.UseCTM = false;
         wManager.wManagerSetting.CurrentSetting.UseLuaToMove = false;
 
         wManager.wManagerSetting.CurrentSetting.NpcScanAuctioneer = false;
-        wManager.wManagerSetting.CurrentSetting.NpcScanMailboxes = false;
-        wManager.wManagerSetting.CurrentSetting.NpcScanRepair = false;
+        wManager.wManagerSetting.CurrentSetting.NpcScanMailboxes = true;
+        wManager.wManagerSetting.CurrentSetting.NpcScanRepair = true;
         wManager.wManagerSetting.CurrentSetting.NpcScanVendor = false;
 
         wManager.wManagerSetting.CurrentSetting.HarvestHerbs = false;
         wManager.wManagerSetting.CurrentSetting.HarvestMinerals = false;
 
         wManager.wManagerSetting.CurrentSetting.AvoidBlacklistedZonesPathFinder = true;
-        wManager.wManagerSetting.CurrentSetting.AvoidWallWithRays = true;
+        wManager.wManagerSetting.CurrentSetting.AvoidWallWithRays = false;
         wManager.wManagerSetting.CurrentSetting.BlackListTrainingDummy = true;
-        wManager.wManagerSetting.CurrentSetting.BlackListZoneWhereDead = false;
+        wManager.wManagerSetting.CurrentSetting.BlackListZoneWhereDead = true;
         wManager.wManagerSetting.CurrentSetting.CalcuCombatRange = false;
         wManager.wManagerSetting.CurrentSetting.CanAttackUnitsAlreadyInFight = false;
         wManager.wManagerSetting.CurrentSetting.CloseIfPlayerTeleported = false;
