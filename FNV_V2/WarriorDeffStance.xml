@@ -4389,8 +4389,8 @@ public class QuesterSettings
         wManager.wManagerSetting.CurrentSetting.NpcScanRepair = true;
         wManager.wManagerSetting.CurrentSetting.NpcScanVendor = false;
 
-        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = false;
-        wManager.wManagerSetting.CurrentSetting.HarvestMinerals = false;
+        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = true;
+        wManager.wManagerSetting.CurrentSetting.HarvestMinerals = true;
 
         wManager.wManagerSetting.CurrentSetting.AvoidBlacklistedZonesPathFinder = true;
         wManager.wManagerSetting.CurrentSetting.AvoidWallWithRays = false;
@@ -4477,8 +4477,8 @@ public class QuesterSettings
         wManager.wManagerSetting.CurrentSetting.NpcScanRepair = true;
         wManager.wManagerSetting.CurrentSetting.NpcScanVendor = false;
 
-        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = false;
-        wManager.wManagerSetting.CurrentSetting.HarvestMinerals = false;
+        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = true;
+        wManager.wManagerSetting.CurrentSetting.HarvestMinerals = true;
 
         wManager.wManagerSetting.CurrentSetting.AvoidBlacklistedZonesPathFinder = true;
         wManager.wManagerSetting.CurrentSetting.AvoidWallWithRays = false;

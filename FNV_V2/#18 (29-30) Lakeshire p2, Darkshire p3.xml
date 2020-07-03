@@ -9676,7 +9676,7 @@ public class QuesterSettings
         wManager.wManagerSetting.CurrentSetting.NpcScanRepair = false;
         wManager.wManagerSetting.CurrentSetting.NpcScanVendor = false;
 
-        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = false;
+        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = true;
         wManager.wManagerSetting.CurrentSetting.HarvestMinerals = true;
 
         wManager.wManagerSetting.CurrentSetting.AvoidBlacklistedZonesPathFinder = true;
@@ -9764,7 +9764,7 @@ public class QuesterSettings
         wManager.wManagerSetting.CurrentSetting.NpcScanRepair = false;
         wManager.wManagerSetting.CurrentSetting.NpcScanVendor = false;
 
-        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = false;
+        wManager.wManagerSetting.CurrentSetting.HarvestHerbs = true;
         wManager.wManagerSetting.CurrentSetting.HarvestMinerals = true;
 
         wManager.wManagerSetting.CurrentSetting.AvoidBlacklistedZonesPathFinder = true;
